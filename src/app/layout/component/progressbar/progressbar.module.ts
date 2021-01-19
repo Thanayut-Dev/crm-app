@@ -1,10 +1,11 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { ProgressbarComponent } from './progressbar.component';
 
 
 
 @NgModule({
-  declarations: [],
+  declarations: [ProgressbarComponent],
   imports: [
     CommonModule
   ]
