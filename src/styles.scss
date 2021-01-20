@@ -1,4 +1,50 @@
 
+// // Custom Theming for Angular Material
+// // For more information: https://material.angular.io/guide/theming
+// @import '~@angular/material/theming';
+// // Plus imports for other components in your app.
+
+// // Include the common styles for Angular Material. We include this here so that you only
+// // have to load a single css file for Angular Material in your app.
+// // Be sure that you only ever include this mixin once!
+// @include mat-core();
+
+// // Define the palettes for your theme using the Material Design palettes available in palette.scss
+// // (imported above). For each palette, you can optionally specify a default, lighter, and darker
+// // hue. Available color palettes: https://material.io/design/color/
+// $crm-app-primary: mat-palette($mat-indigo);
+// $crm-app-accent: mat-palette($mat-pink, A200, A100, A400);
+
+// // The warn palette is optional (defaults to red).
+// $crm-app-warn: mat-palette($mat-red);
+
+// // Create the theme object. A theme consists of configurations for individual
+// // theming systems such as "color" or "typography".
+// $crm-app-theme: mat-light-theme((
+//   color: (
+//     primary: $crm-app-primary,
+//     accent: $crm-app-accent,
+//     warn: $crm-app-warn,
+//   )
+// ));
+
+// // Include theme styles for core and each component used in your app.
+// // Alternatively, you can import and @include the theme mixins for each component
+// // that you are using.
+// @include angular-material-theme($crm-app-theme);
+
+// /* You can add global styles to this file, and also import other style files */
+
+// html, body { height: 100%; }
+// body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+
+
+
+
+
+
+
 // Custom Theming for Angular Material
 // For more information: https://material.angular.io/guide/theming
 @import '~@angular/material/theming';
@@ -12,28 +58,61 @@
 // Define the palettes for your theme using the Material Design palettes available in palette.scss
 // (imported above). For each palette, you can optionally specify a default, lighter, and darker
 // hue. Available color palettes: https://material.io/design/color/
-$crm-app-primary: mat-palette($mat-indigo);
-$crm-app-accent: mat-palette($mat-pink, A200, A100, A400);
+$ng-app-primary: mat-palette($mat-light-blue);
+$ng-app-accent: mat-palette($mat-pink, A200, A100, A400);
 
 // The warn palette is optional (defaults to red).
-$crm-app-warn: mat-palette($mat-red);
+$ng-app-warn: mat-palette($mat-red);
 
 // Create the theme object. A theme consists of configurations for individual
 // theming systems such as "color" or "typography".
-$crm-app-theme: mat-light-theme((
-  color: (
-    primary: $crm-app-primary,
-    accent: $crm-app-accent,
-    warn: $crm-app-warn,
-  )
-));
+$ng-app-theme: mat-light-theme((color: (primary: $ng-app-primary,
+      accent: $ng-app-accent,
+      warn: $ng-app-warn,
+    )));
+
 
 // Include theme styles for core and each component used in your app.
 // Alternatively, you can import and @include the theme mixins for each component
 // that you are using.
-@include angular-material-theme($crm-app-theme);
+@include angular-material-theme($ng-app-theme);
 
 /* You can add global styles to this file, and also import other style files */
 
-html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+html,
+body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+.content {
+  padding-top: 10px;
+  padding-left: 20px;
+  padding-right: 10px;
+  padding-bottom: 10px;
+}
+
+.errorMessage {
+  color: red;
+}
+
+.chkbox-from-field {
+  margin-bottom: 25px;
+  border: 1px solid rgba(204, 204, 204, 0.6) !important;
+  padding: 1em 16px 1em;
+  border-radius: 5px;
+
+  .label {
+    // color: rgba(204, 204, 204, 0.9);
+    margin-top: -27px;
+    background-color: white;
+    width:70px !important;
+    text-align: center;
+    font-size: 0.8em;
+    color: rgba(0, 0, 0, 0.599);
+  }
+}

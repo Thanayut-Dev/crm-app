@@ -36,10 +36,10 @@ import { MatAutocompleteModule } from '@angular/material/autocomplete';
 
 import { DirectivesModule } from './directives/directive.module';
 import { PipesModule } from './pipes/pipe.module';
-import { InMemoryWebApiModule } from 'angular-in-memory-web-api';
-import { FakeDbService } from '../fake-db/fake-db.service';
-import { FormbaseComponent } from './components/formbase/formbase.component';
-import { TablebaseComponent } from './components/formbase/tablebase.component';
+// import { InMemoryWebApiModule } from 'angular-in-memory-web-api';
+// import { FakeDbService } from '../fake-db/fake-db.service';
+// import { FormbaseComponent } from './components/formbase/formbase.component';
+// import { TablebaseComponent } from './components/formbase/tablebase.component';
 
 
 
@@ -47,7 +47,8 @@ import { TablebaseComponent } from './components/formbase/tablebase.component';
 
 
 @NgModule({
-  declarations: [FormbaseComponent, TablebaseComponent],
+  // declarations: [FormbaseComponent, TablebaseComponent],
+  declarations: [],
   imports: [
     CommonModule,
     FlexLayoutModule,
@@ -76,7 +77,7 @@ import { TablebaseComponent } from './components/formbase/tablebase.component';
     MatSelectModule,
     MatStepperModule,
     MatAutocompleteModule,
-    
+
     DirectivesModule,
     PipesModule,
   ],
@@ -113,10 +114,10 @@ import { TablebaseComponent } from './components/formbase/tablebase.component';
 
     DirectivesModule,
     PipesModule,
-    
 
-    FormbaseComponent,
-    TablebaseComponent
+
+    // FormbaseComponent,
+    // TablebaseComponent
   ]
 })
 export class SharedModule { }
