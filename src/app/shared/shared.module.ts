@@ -36,6 +36,8 @@ import { MatAutocompleteModule } from '@angular/material/autocomplete';
 
 import { DirectivesModule } from './directives/directive.module';
 import { PipesModule } from './pipes/pipe.module';
+import { FormbaseComponent } from './components/formbase/formbase.component';
+import { TablebaseComponent } from './components/formbase/tablebase.component';
 // import { InMemoryWebApiModule } from 'angular-in-memory-web-api';
 // import { FakeDbService } from '../fake-db/fake-db.service';
 // import { FormbaseComponent } from './components/formbase/formbase.component';
@@ -47,8 +49,7 @@ import { PipesModule } from './pipes/pipe.module';
 
 
 @NgModule({
-  // declarations: [FormbaseComponent, TablebaseComponent],
-  declarations: [],
+  declarations: [FormbaseComponent, TablebaseComponent],
   imports: [
     CommonModule,
     FlexLayoutModule,
@@ -116,8 +117,8 @@ import { PipesModule } from './pipes/pipe.module';
     PipesModule,
 
 
-    // FormbaseComponent,
-    // TablebaseComponent
+    FormbaseComponent,
+    TablebaseComponent
   ]
 })
 export class SharedModule { }
