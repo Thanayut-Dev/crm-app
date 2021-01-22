@@ -98,6 +98,7 @@ export class GenericMasterComponent implements OnInit, OnDestroy {
   }
 
   onDetail(row): void {
+    console.log(this.layout.key + " " + row.id);
     this.router.navigateByUrl(`${this.layout.key}/${row.id}`);
   }
 

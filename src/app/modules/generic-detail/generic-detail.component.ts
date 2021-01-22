@@ -47,6 +47,7 @@ export class GenericDetailComponent implements OnInit, OnDestroy {
       )
       .subscribe((layouts) => {
         this.layouts = layouts;
+        console.log(this.layouts);
         if (layouts && layouts.length > 0) {
           this.selectChanged(0);
         }
@@ -133,6 +134,7 @@ export class GenericDetailComponent implements OnInit, OnDestroy {
 
   onDetail(row): void {
     if (this.layout.haveDetail) {
+      console.log(this.layout.key);
       this.router.navigateByUrl(`${this.layout.key}/${row.id}`);
     } else {
       this.onEdit(row);

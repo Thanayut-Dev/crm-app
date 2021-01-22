@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-deal-form',
@@ -6,7 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./deal-form.component.scss']
 })
 export class DealFormComponent implements OnInit {
-
+  @Input() model: any
   constructor() { }
 
   ngOnInit(): void {
