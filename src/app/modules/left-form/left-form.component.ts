@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-left-form',
@@ -6,6 +6,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./left-form.component.scss']
 })
 export class LeftFormComponent implements OnInit {
+
+  @Input() model: any;
 
   constructor() { }
 

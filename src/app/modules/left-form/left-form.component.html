@@ -1,1 +1,3 @@
-<p>left-form works!</p>
+<app-contact-form *ngIf="(model | async).layout === 'contacts'" [model]="model"></app-contact-form>
+<app-customer-form *ngIf="(model | async).layout === 'customers'" [model]="model"></app-customer-form>
+<app-deal-form *ngIf="(model | async).layout === 'deals'" [model]="model"></app-deal-form>
