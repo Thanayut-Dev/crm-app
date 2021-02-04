@@ -1,0 +1,28 @@
+<div fxLayout="column wrap" *ngFor="let contact of model" class="contact-list">
+  <div fxLayout="row wrap" fxFlex>
+
+    <div fxLayoutAlign="center center" fxFlex="30">
+      <div mat-card-avatar class="avatar-header" style="background-image: url('{{contact.contactImage}}');"></div>
+    </div>
+
+    <div fxLayoutAlign="start stretch" fxFlex="70">
+
+      <div fxLayout="column wrap" fxFlex>
+        <div fxLayout="row wrap" fxFlex>
+          <div fxLayoutAlign="start" class="contact-name" fxFlex>
+            <strong>
+              {{contact.contactName}}
+            </strong>
+          </div>
+          <div fxLayoutAlign="end" class="contact-message" fxFlex>
+            yesterday
+          </div>
+        </div>
+        <div fxLayout="row wrap" class="contact-message" fxFlex>
+          สวัสดี
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>

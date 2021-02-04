@@ -6,10 +6,13 @@ import { Component, Input, OnInit } from '@angular/core';
   styleUrls: ['./left-form.component.scss']
 })
 export class LeftFormComponent implements OnInit {
+
   @Input() model: any;
+
   constructor() { }
 
   ngOnInit(): void {
+    // console.log(this.model);
   }
 
 }

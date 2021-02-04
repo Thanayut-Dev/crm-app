@@ -42,7 +42,7 @@ export class GenericMasterComponent implements OnInit, OnDestroy {
         takeUntil(this._unsubscribeAll)
       )
       .subscribe((layouts) => {
-        console.log(layouts);
+        // console.log(layouts);
         if (layouts && layouts.length > 0) {
           this.layout = layouts[0];
           this.formBase = this.layout?.forms || [];

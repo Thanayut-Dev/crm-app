@@ -105,6 +105,12 @@ const routes: Routes = [
     },
     canActivate: [AuthGuard]
   },
+  {
+    path: 'chats',
+    loadChildren: () => import('./modules/chat/chat.module').then(m => m.ChatModule),
+    data: { layouts: ['chats'] },
+    canActivate: [AuthGuard]
+  },
   // {
   //   path: 'settings',
   //   loadChildren: () => import('./modules/settings/settings.module').then(m => m.SettingsModule),
