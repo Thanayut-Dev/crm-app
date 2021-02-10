@@ -1,13 +1,13 @@
 <mat-drawer-container>
   <mat-drawer class="left-panel" mode="side" opened="true" position="start">
-    <mat-toolbar>
+    <mat-toolbar style="position: absolute;">
       <div fxFill fxLayout="row" fxLayoutAlign="start center">
 
         <div fxFlex="1 0 auto" fxLayout="row" fxLayoutAlign="start center">
           <button type="button" aria-label="Toggle sidenav" mat-icon-button>
             <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
           </button>
-          <span>ทั้งหมด</span>
+          <span>All</span>
         </div>
 
         <div class="" fxFlex="0 1 auto" fxLayout="row" fxLayoutAlign="start center">
@@ -22,7 +22,7 @@
 
   </mat-drawer>
   <mat-drawer-content class="content-panel">
-    <mat-toolbar>
+    <mat-toolbar class="toolbar-content">
       <div fxFill fxLayout="row" fxLayoutAlign="start center">
         <div fxLayoutAlign="start" fxFlex="30">
           <div mat-card-avatar class="avatar-header"
@@ -33,19 +33,19 @@
         <div fxLayoutAlign="end" fxFlex="70">
           <div fxLayoutAlign="start center">
             <button mat-stroked-button class="button">
-              <mat-icon>chat</mat-icon>
+              <mat-icon class="size-icon-toolbar">chat</mat-icon>
               <span>Follow up</span>
             </button>
           </div>
           <div fxLayoutAlign="start center">
             <button mat-stroked-button class="button">
-              <mat-icon>check</mat-icon>
+              <mat-icon class="size-icon-toolbar">check</mat-icon>
               <span>Resolve</span>
             </button>
           </div>
           <div fxLayoutAlign="start center">
             <button mat-stroked-button class="button">
-              <mat-icon>search</mat-icon>
+              <mat-icon class="size-icon-toolbar">search</mat-icon>
               <span>Search</span>
             </button>
           </div>
@@ -54,40 +54,24 @@
       </div>
     </mat-toolbar>
 
-    <!-- <div fxLayout="row" fxLayoutAlign="end" *ngIf="drawerContent">
-      <button type="button" aria-label="Toggle sidenav" mat-icon-button (click)="toggle(true)">
-        <mat-icon aria-label="Side nav toggle icon">keyboard_backspace</mat-icon>
-      </button>
-    </div> -->
+    <div fxLayout="column" class="content-panel-background">
 
-    <div fxFill fxLayout="column">
       <div fxLayout="row" fxLayoutAlign="end" *ngIf="drawerContent">
         <button type="button" aria-label="Toggle sidenav" mat-icon-button (click)="toggle(false)">
           <mat-icon aria-label="Side nav toggle icon">skip_previous</mat-icon>
         </button>
       </div>
+
+      <!-- <app-left-form [model]="chatService.onDataChangedObservable$"></app-left-form> -->
+      <app-contact-chats></app-contact-chats>
+
     </div>
 
-    <div fxLayout="column" class="content-panel-background">
-      <div fxLayout="row" class="content-panel-background" fxLayoutAlign="start" fxFlex>
-        1
-      </div>
-      <div fxLayout="row" fxLayoutAlign="end" fxFlex>
-        2
-      </div>
-    </div>
-
-    <div fxFill fxLayout="column">
+    <div fxLayout="column">
       <div fxLayout="row" fxLayoutAlign="start center" style="width: auto !important;" fxFlex>
-        <input matInput type="search" placeholder="Enter your message here" style="padding-left:10px; height: 70px;"
-          [(ngModel)]="search">
+        <input matInput type="search" placeholder="Enter your message here" style="height: 40px;" [(ngModel)]="search">
       </div>
     </div>
-
-    <!-- <div fxLayout="row" fxLayoutAlign="start center" style="width: auto !important;">
-      <input matInput fxFlex type="search" placeholder="Enter your message here"
-        style="padding-left:10px; height: 70px;" [(ngModel)]="search">
-    </div> -->
 
   </mat-drawer-content>
   <mat-drawer #drawer class="left-panel" mode="side" opened="true" position="end">
@@ -113,55 +97,83 @@
 
     </mat-toolbar>
 
+
     <div fxLayout="column">
-      <div fxLayout="row" fxFlex>
+
+      <div fxLayoutAlign="center" fxFlex>
+        <div fxLayout="column" fxFlex>
+          <div fxLayout="row" fxFlex>
+            <div fxLayoutAlign="start" fxFlex>
+              <button type="button" aria-label="Toggle sidenav" mat-icon-button (click)="toggle(true)">
+                <mat-icon aria-label="Side nav toggle icon">skip_next</mat-icon>
+              </button>
+            </div>
+            <div fxLayoutAlign="end" fxFlex>
+              <button mat-icon-button [matMenuTriggerFor]="menu" aria-label="Example icon-button with a menu">
+                <mat-icon>more_vert</mat-icon>
+              </button>
+              <mat-menu #menu="matMenu">
+                <button mat-menu-item>
+                  <mat-icon>edit</mat-icon>
+                  <span>Edit</span>
+                </button>
+                <button mat-menu-item>
+                  <mat-icon>assignment</mat-icon>
+                  <span>Detail</span>
+                </button>
+              </mat-menu>
+            </div>
+          </div>
+
+          <div fxLayout="row" fxFlex>
+            <div fxLayoutAlign="center" fxFlex>
+              <div mat-card-avatar class="avatar-profile"
+                style="background-image: url('https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_640.png');">
+              </div>
+            </div>
+          </div>
+          <div fxLayout="row" fxFlex>
+            <div fxLayoutAlign="center" fxFlex>
+              <h2 style="padding-top: 10px; padding-left: 5px;">Thanayut Phinsuwan</h2>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div fxLayoutAlign="center" fxFlex>
+        <div fxLayout="column" fxFlex>
+          <div fxLayout="row" fxFlex>
+            <div fxLayoutAlign="start" fxFlex="15">
+              <h3 style="margin-top: 15px; margin-bottom: 15px; padding-left:10px;">Note</h3>
+            </div>
+            <div fxLayoutAlign="start" fxFlex>
+              <h3 style="margin-top: 15px; margin-bottom: 15px; padding-left:5px;">0</h3>
+            </div>
+            <div fxLayoutAlign="end" fxFlex>
+              <button mat-icon-button color="primary" (click)="node()">
+                <mat-icon>add</mat-icon>
+              </button>
+            </div>
+          </div>
+
+          <div fxLayout="row" fxFlex>
+            <div fxLayoutAlign="start" fxFlex>
+              1
+            </div>
+            <div fxLayoutAlign="end" fxFlex>
+              2
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- <div fxLayout="row" fxFlex>
         <div fxLayoutAlign="start" fxFlex>
-          <button type="button" aria-label="Toggle sidenav" mat-icon-button (click)="toggle(true)">
-            <mat-icon aria-label="Side nav toggle icon">skip_next</mat-icon>
-          </button>
+          1
         </div>
         <div fxLayoutAlign="end" fxFlex>
-          <button mat-icon-button [matMenuTriggerFor]="menu" aria-label="Example icon-button with a menu">
-            <mat-icon>more_vert</mat-icon>
-          </button>
-          <mat-menu #menu="matMenu">
-            <button mat-menu-item>
-              <mat-icon>dialpad</mat-icon>
-              <span>Redial</span>
-            </button>
-            <button mat-menu-item disabled>
-              <mat-icon>voicemail</mat-icon>
-              <span>Check voice mail</span>
-            </button>
-            <button mat-menu-item>
-              <mat-icon>notifications_off</mat-icon>
-              <span>Disable alerts</span>
-            </button>
-          </mat-menu>
+          2
         </div>
-      </div>
-
-      <div fxLayout="row" fxLayoutAlign="center" fxFlex>
-        <div mat-card-avatar class="avatar-profile"
-          style="background-image: url('https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_640.png');">
-        </div>
-      </div>
-
-      <div fxLayout="row" fxLayoutAlign="center" fxFlex>
-        <h2 style="padding-top: 10px; padding-left: 5px;">Thanayut Phinsuwan</h2>
-      </div>
-
-      <div fxLayout="row" fxLayoutAlign="center" fxFlex>
-        <div fxLayoutAlign="start" fxFlex>
-          <h3 style="margin-top: 15px; margin-bottom: 15px; padding-left:5px;">Note <span>0</span></h3>
-        </div>
-        <div fxLayoutAlign="end" fxFlex>
-          <button mat-icon-button color="primary">
-            <mat-icon>add</mat-icon>
-          </button>
-        </div>
-      </div>
-
+      </div> -->
     </div>
 
 

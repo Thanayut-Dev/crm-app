@@ -29,7 +29,7 @@ export class GenericMasterComponent implements OnInit, OnDestroy {
     private router: Router
   ) {
     this._unsubscribeAll = new Subject();
-   }
+  }
 
   ngOnDestroy(): void {
     this._unsubscribeAll.next();
