@@ -1,0 +1,56 @@
+.mat-drawer-container {
+  width: 100%;
+  min-height: calc(100vh - 105px);
+
+  .left-panel {
+    width: 25%;
+    overflow: scroll;
+  }
+
+  .right-panel {
+    width: 25%;
+    overflow: scroll;
+  }
+
+  .content-panel {
+    width: auto;
+    background-color: #afcef3;
+    // overflow: scroll !important;
+    height: 87.5vh;
+  }
+
+  .mat-toolbar-left {
+    position: sticky;
+    top: 0 !important;
+  }
+
+  .mat-toolbar-header {
+    position: sticky;
+    top: 0 !important;
+
+    .button {
+      margin-left: 10px;
+      margin-right: 10px;
+    }
+  }
+
+  .footer {
+    position: sticky;
+    bottom: 0 !important;
+
+    input {
+      height: 50px;
+      background-color: white;
+    }
+  }
+
+  .mat-toolbar-right {
+    position: sticky;
+    top: 0 !important;
+  }
+}
+
+:host ::ng-deep .mat-form-field-wrapper {
+  padding-bottom: 15px;
+  width: 10vh;
+}
