@@ -10,18 +10,16 @@ import { Mk06FormComponent } from './mk06-form/mk06-form.component';
 import { Mk13FormComponent } from './mk13-form/mk13-form.component';
 import { Mk11FormComponent } from './mk11-form/mk11-form.component';
 import { SoFormComponent } from './so-form/so-form.component';
-import { ContactChatsComponent } from './contact-chats/contact-chats.component';
-import { ContactChatListComponent } from './contact-chat-list/contact-chat-list.component';
 
 
 
 @NgModule({
-  declarations: [LeftFormComponent, ContactFormComponent, CustomerFormComponent, DealFormComponent, DocumentFormComponent, Mk06FormComponent, Mk13FormComponent, Mk11FormComponent, SoFormComponent, ContactChatsComponent, ContactChatListComponent],
+  declarations: [LeftFormComponent, ContactFormComponent, CustomerFormComponent, DealFormComponent, DocumentFormComponent, Mk06FormComponent, Mk13FormComponent, Mk11FormComponent, SoFormComponent],
   imports: [
     CommonModule,
 
     SharedModule
   ],
-  exports: [LeftFormComponent,ContactChatsComponent]
+  exports: [LeftFormComponent]
 })
 export class LeftFormModule { }

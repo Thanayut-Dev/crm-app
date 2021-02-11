@@ -16,8 +16,8 @@ export class ContactChatInfoComponent implements OnInit {
   }
 
   node() {
-    console.log("note");
-    this.router.navigateByUrl('notes')
+    // console.log("note");
+    this.router.navigateByUrl('/note');
   }
 
 

@@ -5,5 +5,3 @@
 <app-mk13-form *ngIf="(model | async).layout === 'fm-mk-13'" [model]="model"></app-mk13-form>
 <app-mk11-form *ngIf="(model | async).layout === 'fm-mk-11'" [model]="model"></app-mk11-form>
 <app-so-form *ngIf="(model | async).layout === 'so'" [model]="model"></app-so-form>
-<!-- <app-contact-chats *ngIf="(model).source._value[0]?.layout === 'chats'" [model]="model.source._value"></app-contact-chats> -->
-<app-contact-chat-list *ngIf="(model).source._value[0]?.layout === 'chats'" [model]="model.source._value"></app-contact-chat-list>

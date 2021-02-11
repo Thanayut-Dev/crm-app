@@ -106,15 +106,15 @@ const routes: Routes = [
     canActivate: [AuthGuard]
   },
   {
-    path: 'chats',
-    loadChildren: () => import('./modules/chat/chat.module').then(m => m.ChatModule),
-    data: { layouts: ['chats'] },
-    canActivate: [AuthGuard]
-  },
-  {
     path: 'contact-chats',
     loadChildren: () => import('./modules/contact-chat-content/contact-chat-content.module').then(m => m.ContactChatContentModule),
     data: { layouts: ['contact-chats'] },
+    canActivate: [AuthGuard]
+  },
+  {
+    path: 'note',
+    loadChildren: () => import('./modules/generic-master/generic-master.module').then(m => m.GenericMasterModule),
+    data: { layouts: ['notes'] },
     canActivate: [AuthGuard]
   },
   // {
