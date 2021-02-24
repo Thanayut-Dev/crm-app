@@ -37,10 +37,18 @@
   .footer {
     position: sticky;
     bottom: 0 !important;
-
-    input {
+    background-color: white;
+    textarea {
+      height: 49px;
+      background-color: white;
+    }
+    button{
       height: 50px;
       background-color: white;
+
+      mat-icon{
+        color: gray;
+      }
     }
   }
 

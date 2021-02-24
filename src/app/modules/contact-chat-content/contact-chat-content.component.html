@@ -56,11 +56,15 @@
         <mat-icon aria-label="Side nav toggle icon">skip_previous</mat-icon>
       </button>
     </div>
-    <app-contact-chat></app-contact-chat>
+    <!-- <app-contact-chat></app-contact-chat> -->
+    <app-contact-chat [chatData]="chatData"></app-contact-chat>
     <footer class="footer">
       <div fxLayout="column">
         <div fxLayout="row" fxLayoutAlign="start center" style="width: auto !important;" fxFlex>
-          <input matInput type="search" placeholder="Enter your message here" [(ngModel)]="search">
+          <textarea matInput placeholder="Enter your message here" [(ngModel)]="message" (keyup.enter)="sendMessage()" fxFlex></textarea>
+          <button mat-flat-button (click)="sendMessage()">
+            <mat-icon>send</mat-icon>
+          </button>
         </div>
       </div>
     </footer>
