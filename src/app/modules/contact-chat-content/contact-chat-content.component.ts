@@ -62,6 +62,7 @@ export class ContactChatContentComponent implements OnInit {
         } else {
           this.chatData.push(data);
         }
+
         // this.chatData = data;
         // console.log(this.chatData);
         // if (data.type === 'qrSes') {
@@ -69,6 +70,8 @@ export class ContactChatContentComponent implements OnInit {
         // }
         // console.log(this.chatData);
       });
+
+      console.log(this.chatData);
   }
 
   async sendMessage() {

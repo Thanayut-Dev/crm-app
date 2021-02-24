@@ -61,8 +61,8 @@
     <footer class="footer">
       <div fxLayout="column">
         <div fxLayout="row" fxLayoutAlign="start center" style="width: auto !important;" fxFlex>
-          <textarea matInput placeholder="Enter your message here" [(ngModel)]="message" (keyup.enter)="sendMessage()" fxFlex></textarea>
-          <button mat-flat-button (click)="sendMessage()">
+          <textarea matInput [(ngModel)]="message" (keyup.enter)="sendMessage()" fxFlex></textarea>
+          <button mat-icon-button (click)="sendMessage()">
             <mat-icon>send</mat-icon>
           </button>
         </div>
