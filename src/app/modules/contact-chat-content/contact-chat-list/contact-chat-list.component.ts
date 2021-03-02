@@ -12,7 +12,6 @@ export class ContactChatListComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
-    // console.log(this.model);
   }
 
 }

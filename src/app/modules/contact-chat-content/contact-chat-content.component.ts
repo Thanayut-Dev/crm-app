@@ -47,7 +47,6 @@ export class ContactChatContentComponent implements OnInit {
   ) { }
 
   ngOnInit(): void {
-    this.model = this.contactChatService.getUsersData();
 
     this.contactChatService.getServerEventSource('http://localhost:3001/events')
       .subscribe((chat) => {
@@ -62,16 +61,12 @@ export class ContactChatContentComponent implements OnInit {
         } else {
           this.chatData.push(data);
         }
-
-        // this.chatData = data;
-        // console.log(this.chatData);
-        // if (data.type === 'qrSes') {
-        //   this.qr = `/qrlogin/v1/qr/${data.value}`
-        // }
-        // console.log(this.chatData);
       });
 
-      console.log(this.chatData);
+    this.contactChatService.getContactListData().then((res: any) => {
+      console.log(res.data);
+      this.model = res.data;
+    })
   }
 
   async sendMessage() {

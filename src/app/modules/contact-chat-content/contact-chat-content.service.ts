@@ -22,9 +22,6 @@ export class ContactChatContentService implements Resolve<any> {
   ) { }
   resolve(route: ActivatedRouteSnapshot, state: RouterStateSnapshot) {
     console.log('resolve');
-    // this.getUsersData();
-    // this.getServerEventSource();
-    // return;
   }
 
   getUsersData() {
@@ -146,6 +143,15 @@ export class ContactChatContentService implements Resolve<any> {
     return new Promise((resolve, reject) => {
       this.http.post('http://localhost:3001/sentevents', body).subscribe((res: any) => {
         resolve(res.data);
+      }, reject);
+    })
+  }
+
+  getContactListData(): Promise<any> {
+    return new Promise((resolve, reject) => {
+      this.http.get('http://localhost:3001/senteventinboxs').subscribe((res: any) => {
+        // console.log(res);
+        resolve(res);
       }, reject);
     })
   }
