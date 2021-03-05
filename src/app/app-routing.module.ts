@@ -117,6 +117,12 @@ const routes: Routes = [
     data: { layouts: ['notes'] },
     canActivate: [AuthGuard]
   },
+  {
+    path: 'scrumboard',
+    loadChildren: () => import('./modules/scrumboard/scrumboard.module').then(m => m.ScrumboardModule),
+    // canActivate: [AuthGuard]
+  },
+
   // {
   //   path: 'settings',
   //   loadChildren: () => import('./modules/settings/settings.module').then(m => m.SettingsModule),

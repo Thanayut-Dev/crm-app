@@ -8,6 +8,10 @@ import { Layout1Module } from './layout/layout1/layout1.module';
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { MAT_DATE_LOCALE } from '@angular/material/core';
 import { AppInterceptor } from './app.interceptor';
+import { InMemoryWebApiModule } from 'angular-in-memory-web-api';
+import { FakeDbService } from './fake-db/fake-db.service';
+import { fuseConfig } from './fuse-config/index';
+import { FuseModule } from './shared/fuse.module';
 
 @NgModule({
   declarations: [
@@ -18,6 +22,12 @@ import { AppInterceptor } from './app.interceptor';
     AppRoutingModule,
     BrowserAnimationsModule,
     HttpClientModule,
+
+    InMemoryWebApiModule.forRoot(FakeDbService, {
+      delay: 0,
+      passThruUnknownUrl: true
+    }),
+    FuseModule.forRoot(fuseConfig),
 
     Layout1Module
   ],
