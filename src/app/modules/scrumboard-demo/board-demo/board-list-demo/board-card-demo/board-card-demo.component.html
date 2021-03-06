@@ -8,13 +8,11 @@
     <mat-icon mat-font-icon="icon-cursor-move" class="icon s16"></mat-icon>
   </div>
 
-  <!-- <div *ngIf="card.idLabels.length > 0" class="list-card-labels" fxLayout="row wrap">
-        <span class="list-card-label"
-              [ngClass]="board.labels | getById:labelId:'color'"
-              *ngFor="let labelId of card.idLabels"
-              [matTooltip]="board.labels | getById:labelId:'name'">
-        </span>
-    </div> -->
+  <div *ngIf="card.idLabels.length > 0" class="list-card-labels" fxLayout="row wrap">
+    <span class="list-card-label" [ngClass]="board.labels | getById:labelId:'color'"
+      *ngFor="let labelId of card.idLabels" [matTooltip]="board.labels | getById:labelId:'name'">
+    </span>
+  </div>
 
   <div class="list-card-name">{{card.name}}</div>
 
@@ -36,12 +34,12 @@
 
   </div>
 
-  <!-- <div *ngIf="card.idMembers.length > 0" class="list-card-members" fxLayout="row">
+  <div *ngIf="card.idMembers.length > 0" class="list-card-members" fxLayout="row">
     <div class="list-card-member" *ngFor="let memberId of card.idMembers">
       <img class="list-card-member-avatar" [src]="board.members | getById:memberId:'avatar'"
         [matTooltip]="board.members | getById:memberId:'name'">
     </div>
-  </div> -->
+  </div>
 
 </div>
 <div class="list-card-footer" fxLayout="row" fxLayoutAlign="space-between center">

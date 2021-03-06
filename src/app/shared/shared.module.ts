@@ -29,6 +29,7 @@ import { MatDialogModule } from '@angular/material/dialog';
 import { MatSelectModule } from '@angular/material/select';
 import { MatStepperModule } from '@angular/material/stepper';
 import { MatAutocompleteModule } from '@angular/material/autocomplete';
+import { MatTooltipModule } from '@angular/material/tooltip';
 
 
 
@@ -78,6 +79,7 @@ import { TablebaseComponent } from './components/formbase/tablebase.component';
     MatSelectModule,
     MatStepperModule,
     MatAutocompleteModule,
+    MatTooltipModule,
 
     DirectivesModule,
     PipesModule,
@@ -112,6 +114,7 @@ import { TablebaseComponent } from './components/formbase/tablebase.component';
     MatSelectModule,
     MatStepperModule,
     MatAutocompleteModule,
+    MatTooltipModule,
 
     DirectivesModule,
     PipesModule,
