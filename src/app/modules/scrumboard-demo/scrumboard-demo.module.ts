@@ -34,7 +34,18 @@ const routes: Routes = [
 ];
 
 @NgModule({
-  declarations: [ScrumboardDemoComponent, BoardDemoComponent, BoardEditNameComponent, BoardAddListComponent, BoardListDemoComponent, BoardListEditNameComponent, BoardCardDemoComponent, BoardAddCardDemoComponent, DialogCardComponent, DialogLabelComponent],
+  declarations: [
+    ScrumboardDemoComponent,
+    BoardDemoComponent,
+    BoardEditNameComponent,
+    BoardAddListComponent,
+    BoardListDemoComponent,
+    BoardListEditNameComponent,
+    BoardCardDemoComponent,
+    BoardAddCardDemoComponent,
+    DialogCardComponent,
+    DialogLabelComponent
+  ],
   imports: [
     CommonModule,
     RouterModule.forChild(routes),

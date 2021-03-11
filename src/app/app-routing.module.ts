@@ -118,11 +118,6 @@ const routes: Routes = [
     canActivate: [AuthGuard]
   },
   {
-    path: 'scrumboard',
-    loadChildren: () => import('./modules/scrumboard/scrumboard.module').then(m => m.ScrumboardModule),
-    // canActivate: [AuthGuard]
-  },
-  {
     path: 'scrumboard-demo',
     loadChildren: () => import('./modules/scrumboard-demo/scrumboard-demo.module').then(m => m.ScrumboardDemoModule),
     // canActivate: [AuthGuard]
