@@ -12,6 +12,9 @@ import { BoardListDemoComponent } from './board-demo/board-list-demo/board-list-
 import { BoardListEditNameComponent } from './board-demo/board-list-demo/board-list-edit-name/board-list-edit-name.component';
 import { BoardCardDemoComponent } from './board-demo/board-list-demo/board-card-demo/board-card-demo.component';
 import { BoardAddCardDemoComponent } from './board-demo/board-list-demo/board-add-card-demo/board-add-card-demo.component';
+import { DialogCardComponent } from './board-demo/dialog-card/dialog-card.component';
+import { DialogLabelComponent } from './board-demo/dialog-card/dialog-label/dialog-label.component';
+import { FuseMaterialColorPickerModule } from '../../shared/components/material-color-picker/material-color-picker.module';
 
 const routes: Routes = [
   {
@@ -31,11 +34,13 @@ const routes: Routes = [
 ];
 
 @NgModule({
-  declarations: [ScrumboardDemoComponent, BoardDemoComponent, BoardEditNameComponent, BoardAddListComponent, BoardListDemoComponent, BoardListEditNameComponent, BoardCardDemoComponent, BoardAddCardDemoComponent],
+  declarations: [ScrumboardDemoComponent, BoardDemoComponent, BoardEditNameComponent, BoardAddListComponent, BoardListDemoComponent, BoardListEditNameComponent, BoardCardDemoComponent, BoardAddCardDemoComponent, DialogCardComponent, DialogLabelComponent],
   imports: [
     CommonModule,
     RouterModule.forChild(routes),
     SharedModule,
+
+    FuseMaterialColorPickerModule,
 
     NgxDnDModule
   ],

@@ -17,6 +17,7 @@ import { ScrumboardBoardSettingsSidenavComponent } from './board/sidenavs/settin
 import { ScrumboardBoardAddListComponent } from './board/add-list/add-list.component';
 import { ScrumboardLabelSelectorComponent } from './board/dialogs/card/label-selector/label-selector.component';
 import { ScrumboardBoardColorSelectorComponent } from './board/sidenavs/settings/board-color-selector/board-color-selector.component';
+import { FuseMaterialColorPickerModule } from '../../shared/components/material-color-picker/material-color-picker.module';
 
 const routes: Routes = [
   {
@@ -62,6 +63,7 @@ const routes: Routes = [
     CommonModule,
     RouterModule.forChild(routes),
     SharedModule,
+    FuseMaterialColorPickerModule,
 
     NgxDnDModule
   ],

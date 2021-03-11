@@ -39,6 +39,7 @@ import { DirectivesModule } from './directives/directive.module';
 import { PipesModule } from './pipes/pipe.module';
 import { FormbaseComponent } from './components/formbase/formbase.component';
 import { TablebaseComponent } from './components/formbase/tablebase.component';
+import { MatChipsModule } from '@angular/material/chips';
 // import { InMemoryWebApiModule } from 'angular-in-memory-web-api';
 // import { FakeDbService } from '../fake-db/fake-db.service';
 // import { FormbaseComponent } from './components/formbase/formbase.component';
@@ -80,6 +81,7 @@ import { TablebaseComponent } from './components/formbase/tablebase.component';
     MatStepperModule,
     MatAutocompleteModule,
     MatTooltipModule,
+    MatChipsModule,
 
     DirectivesModule,
     PipesModule,
@@ -115,6 +117,7 @@ import { TablebaseComponent } from './components/formbase/tablebase.component';
     MatStepperModule,
     MatAutocompleteModule,
     MatTooltipModule,
+    MatChipsModule,
 
     DirectivesModule,
     PipesModule,

@@ -7,6 +7,7 @@ import { FuseConfirmDialogComponent } from 'src/app/shared/components/confirm-di
 import { FusePerfectScrollbarDirective } from 'src/app/shared/directives/fuse-perfect-scrollbar/fuse-perfect-scrollbar.directive';
 import { ScrumboardDemoService } from '../../scrumboard-demo.service';
 import { Card } from '../../card.model';
+import { DialogCardComponent } from '../dialog-card/dialog-card.component';
 
 @Component({
   selector: 'app-board-list-demo',
@@ -83,19 +84,19 @@ export class BoardListDemoComponent implements OnInit {
   }
 
   /* Open card dialog */
-  // openCardDialog(cardId): void {
-  //   this.dialogRef = this.matDialog.open(ScrumboardCardDialogComponent, {
-  //     panelClass: 'scrumboard-card-dialog',
-  //     data: {
-  //       cardId: cardId,
-  //       listId: this.list.id
-  //     }
-  //   });
-  //   this.dialogRef.afterClosed()
-  //     .subscribe(response => {
+  openCardDialog(cardId): void {
+    this.dialogRef = this.matDialog.open(DialogCardComponent, {
+      panelClass: 'app-dialog-card',
+      data: {
+        cardId: cardId,
+        listId: this.list.id
+      }
+    });
+    this.dialogRef.afterClosed()
+      .subscribe(response => {
 
-  //     });
-  // }
+      });
+  }
 
   /* On drop */
   onDrop(ev): void {
